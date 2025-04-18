@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Suzette-Nicole Young">
+  <meta name="description" content="Mood-based CSS design showcase by Nicole. Explore Calm, Bold, and Playful styles using inline, internal, and external CSS.">
+  <meta name="keywords" content="HTML, CSS, mood project, inline CSS, internal CSS, external CSS, Google Fonts, Font Awesome, GitHub portfolio, Suzette-Nicole Young">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What’s Your Mood Today?</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Anton&family=Pacifico&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (Free CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style/style.css">
+
+  <!-- Internal CSS -->
+  <style>
+    .card {
+      max-width: 500px;
+      margin: 2rem auto;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .quote {
+      font-style: italic;
+      margin-top: 1rem;
+      color: #555;
+    }
+
+    /* Mood Theme Fonts & Backgrounds */
+    body.calm {
+      background: url('images/calm-bg.png') no-repeat center center/cover;
+      font-family: 'Lora', serif;
+    }
+
+    body.bold {
+      background: url('images/bold.bg.png') no-repeat center center/cover;
+      font-family: 'Anton', sans-serif;
+    }
+
+    body.playful {
+      background: url('images/playful.bg.png') no-repeat center center/cover;
+      font-family: 'Pacifico', cursive;
+    }
+  </style>
+</head>
+
+<body class="calm">
+
+  <header style="background-color: #ffffffb0; padding: 1rem; border-radius: 10px; text-align: center;">
+    <h1 style="font-size: 2.5rem; font-weight: bold;">What’s Your Mood Today?</h1>
+  </header>
+
+  <div class="button-group" style="text-align: center; margin-top: 1rem;">
+    <button class="mood-btn calm-btn" style="border: 2px solid #2e4a62;" onclick="setMood('calm')">Calm</button>
+    <button class="mood-btn bold-btn" style="border: 2px solid #fff;" onclick="setMood('bold')">Bold</button>
+    <button class="mood-btn playful-btn" style="border: 2px solid #5b3a00;" onclick="setMood('playful')">Playful</button>
+  </div>
+
+  <div class="card sparkle" id="mood-card">
+    <h2 id="mood-title" style="color: teal; font-size: 1.6rem; font-weight: bold;">Today feels calm...</h2>
+    <p class="quote" id="mood-quote">"Peace begins with a deep breath and a clear heart."</p>
+  </div>
+
+  <footer style="text-align: center; font-size: 0.9rem; margin-top: 3rem;">
+    Made with love by Suzette-Nicole Young |
+    <a href="https://github.com/snmyoung" target="_blank" style="text-decoration: underline dotted hotpink;">GitHub</a>
+    <i class="fas fa-star" style="color: gold; margin-left: 5px;"></i>
+  </footer>
+
+  <!-- JavaScript (Vanilla) -->
+  <script src="script/script.js"></script>
+</body>
+</html>
